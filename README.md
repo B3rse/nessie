@@ -1,5 +1,5 @@
 
-# ***NeSSie*** **: nucleic-acids elements of sequence symmetry identification**
+# ***NeSSie***: **nucleic-acids elements of sequence symmetry identification**
 
 **NeSSie** is a c/c++ 64 bit program that allows to perform fast patterns search and sequence analyses on DNA strings using the NeSSie library.
 

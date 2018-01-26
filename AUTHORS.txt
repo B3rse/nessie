@@ -1,0 +1,15 @@
+[ AUTHORS file ]
+
+The following contributions warranted legal paper exchanges 
+with the Free Software Foundation.
+
+Michele Berselli <berselli.michele@gmail.com>
+    	entire files -> Nessie.h, Nessie.cpp
+			LinkedlistKmer.h, LinkedlistKmer.cpp
+			HashTable.h, HashTable.cpp
+			Functions.h
+			FastaUtilities.h, FastaUtilities.cpp
+			main.cpp
+	modifications -> all
+
+For the authors of BitArray and bitscan check the relative documentation inside the respective folders

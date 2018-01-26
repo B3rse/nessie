@@ -160,7 +160,7 @@ Different output files are generated depending on the type of analysis.
 
 To reduce the output file, the **-c** flag can be used to report only counts while the **-i** flag can be used to report only indexes.
 
-A log file that contains informations on errors occurred during the analysis is produced as well as output in the working directory. 
+A log file that contains information on errors occurred during the analysis is produced as well as output in the working directory. 
 
 
 ## **NeSSie Output Parser (NessieOutParser.py)**

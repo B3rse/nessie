@@ -87,7 +87,7 @@ where **-k** is the length of the motifs or k-mers to be searched and *N* is a p
 
 **Output format**
 
-Different output are generated depending on the type of analysis.
+Different output files are generated depending on the type of analysis.
 
 - Standard output for perfect motifs<br/>
 
@@ -175,7 +175,7 @@ In the presence of *N* the sequence is splitted into blocks and each blocks anal
 
 ***note**: the score is calculated as the length of the motif minus the number of mismatches and gaps. Mismatch or gap opening scores -2, while mismatch or gap extension scores -1.*
 
-The parser allows also to generate an output where the retrieved best alignment are explicitated using the **-a** flag. Finally the **-g** flag will generate a GFF format file to simplify the visualization of the results using a genome browser.
+The parser allows also to generate an output where the retrieved best alignments are explicitated using the **-a** flag. Finally the **-g** flag will generate a GFF format file to simplify the visualization of the results using a genome browser.
 
 ***note**: when generating the GFF, a color code is assigned to motifs based on their score. From lower to higher scores the colors are red, yellow, blue, green in the order*.
 

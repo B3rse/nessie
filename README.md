@@ -33,8 +33,7 @@ This will generate the binary file nessie inside the folder.
 
 ## **Using the library**
 
-To bundle the library into your code simply<br/>
-`#include "Nessie.h"`
+To use the library simply `#include "Nessie.h"` into your code.
 
 
 ## **Quick guide**

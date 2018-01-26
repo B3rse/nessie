@@ -22,7 +22,7 @@ A make file is available in the NeSSie folder to easily compile the program. To 
 
 - Download the repository<br/>
 
-- Unpack the repository and position inside the folder <br/>
+- Unpack the repository and position inside the folder<br/>
 `tar -xvzf path/to/packed/folder && cd path/to/unpacked/folder`
 
 - Compile the program<br/>
@@ -33,8 +33,9 @@ This will generate the binary file nessie inside the folder.
 
 ## **Using the library**
 
-To bundle the library into your code simply 
+To bundle the library into your code simply<br/>
 `#include "Nessie.h"`
+
 
 ## **Quick guide**
 

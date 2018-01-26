@@ -111,7 +111,7 @@ Different output are generated depending on the type of analysis.
 		@counts: 2
 		@indexes: 12|20|
 
-	where `$|12|AGAAGAAGAAGA` reports the retrieved motif and its length, `@counts: 6` reports the number of occurrences for the motif and `@indexes: 2|5|8|11|14|17|` reports the indexes at which the motif was found. A new block starting with `>SEQUENCE_NAME` is created for each of the target sequences if a *multi-fasta* is provided as input. `!MOTIF_NAME` is the name of the motif to be searched as provided in the *fasta* / *multi-fasta* file with motifs.
+	where `$|12|AGAAGAAGAAGA` reports the retrieved motif and its length, `@counts: 6` reports the number of occurrences for the motif and `@indexes: 2|5|8|11|14|17|` reports the indexes at which the motif was found (*i.e.* positions in the sequence). A new block starting with `>SEQUENCE_NAME` is created for each of the target sequences if a *multi-fasta* is provided as input. `!MOTIF_NAME` is the name of the motif to be searched as provided in the *fasta* / *multi-fasta* file with motifs.
 	
 - Standard output for degenerated motifs<br/>
 
@@ -123,7 +123,7 @@ Different output are generated depending on the type of analysis.
 		@counts: 2
 		@indexes: 133061|805355|
 		
-	if degenerated motifs are searched, the additional field `0101011001010110010111` is reported. This represents the encoding of the best alignment retrieved for the corresponding sequence, and it is used by the NeSSie Output Parser (see next section) to explicitly print the alignment if desired.
+	if degenerated motifs are searched, the additional field `0101011001010110010111` is reported. This represents the encoding of the best alignment retrieved for the corresponding sequence, and it is used by the NeSSie Output Parser (see next section) to explicitly print the alignment if desired. 00 and 11 represent indels, 01 represent a match, 10 represent a mismatch.
 	
 - Output for complexity and entropy when calculated on the entire sequence<br/>
 

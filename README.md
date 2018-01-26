@@ -5,7 +5,7 @@
 
 The tool currently offers the following types of analyses:
 
-- *De novo* search for motifs with a *mirror* or *palindromic* symmetry, as well as motifs with a *DNA-triplex* forming potential. Both *perfect* and *degenerated* motifs (motifs containing gaps and mismatches) can be detected.
+- *De novo* search for motifs with a *mirror* or *palindromic* symmetry, as well as motifs with a *DNA-triplex* forming potential. Both *perfect* and *degenerate* motifs (motifs containing gaps and mismatches) can be detected.
 - Exhaustive search for all k-mers in the sequence.
 - Calculation of the sequence complexity and entropy on the full sequence, or using a sliding window of given size and shift.
 - Exact search for motifs in a provided list.
@@ -37,7 +37,7 @@ This is a quick reference guide, to see more details on specific analyses check 
 
 **Input**
 
-The program accepts for input both *fasta* and *multi-fasta* files.
+The program accepts in input both *fasta* and *multi-fasta* files.
 
 ***note**: the program can handle uppercase and lowercase letters, as well as the presence of N in the input sequence. It cannot handle IUPAC symbols different from canonical bases A, C, T, G*.
 
@@ -73,7 +73,7 @@ where **-k** is the length of the motifs or k-mers to be searched and *N* is a p
 
 **Additional arguments for -P/-M/-T**
 
-- The tool is flexible enough to allow for the presence of mismatches and gaps that impairs the symmetry of the motifs. **-m** *N* is used to define the percentage of permitted mismatches while **-g** *N* is used to define the percentage of permitted gaps. It is also possible to define a cumulative percentage for both mismatches and gaps using the **-t** *N* parameter. *N* is a positive integer.
+- The tool is flexible enough to allow for the presence of mismatches and gaps that impair the symmetry of the motifs. **-m** *N* is used to define the percentage of permitted mismatches while **-g** *N* is used to define the percentage of permitted gaps. It is also possible to define a cumulative percentage for both mismatches and gaps using the **-t** *N* parameter. *N* is a positive integer.
 
 - The **-MAX**  flag activate the search mode for the longest motif only at each position. **-k** *n* and **-K** *N* are used to specify the length range for the motif [*n*...*N*]. *n* and *N* are positive integers and *n* < *N*.
 
@@ -113,7 +113,7 @@ Different output are generated depending on the type of analysis.
 
 	where `$|12|AGAAGAAGAAGA` reports the retrieved motif and its length, `@counts: 6` reports the number of occurrences for the motif and `@indexes: 2|5|8|11|14|17|` reports the indexes at which the motif was found (*i.e.* positions in the sequence). A new block starting with `>SEQUENCE_NAME` is created for each of the target sequences if a *multi-fasta* is provided as input. `!MOTIF_NAME` is the name of the motif to be searched as provided in the *fasta* / *multi-fasta* file with motifs.
 	
-- Standard output for degenerated motifs<br/>
+- Standard output for degenerate motifs<br/>
 
 		>SEQUENCE_NAME
 		$|21|AAAAAAAATAGATCAAATAAA|0101011001010110010111
@@ -123,7 +123,7 @@ Different output are generated depending on the type of analysis.
 		@counts: 2
 		@indexes: 133061|805355|
 		
-	if degenerated motifs are searched, the additional field `0101011001010110010111` is reported. This represents the encoding of the best alignment retrieved for the corresponding sequence, and it is used by the NeSSie Output Parser (see next section) to explicitly print the alignment if desired. 00 and 11 represent indels, 01 represent a match, 10 represent a mismatch.
+	If degenerate motifs are searched, the additional field `0101011001010110010111` is reported. This represents the encoding of the best alignment retrieved for the corresponding sequence, and it is used by the NeSSie Output Parser (see next section) to explicitly print the alignment if desired. 00 and 11 represent indels, 01 represent a match, 10 represent a mismatch.
 	
 - Output for complexity and entropy when calculated on the entire sequence<br/>
 
@@ -165,7 +165,7 @@ A log file that contains informations on errors occurred during the analysis is 
 
 ## **NeSSie Output Parser (NessieOutParser.py)**
 
-Together with NeSSie it is also provided a python script that can be used to better organize the raw output obtained for the search of *mirror* and *palindromic* motifs, as well as the motifs with a *DNA-triplex* forming potential.
+Together with NeSSie, a python script is also provided that can be used to better organize the raw output obtained for the search of *mirror* and *palindromic* motifs, as well as the motifs with a *DNA-triplex* forming potential.
 
 In the presence of *N* the sequence is splitted into blocks and each blocks analysed separately. If the same motif is detected in different blocks, the hit will be reported for every block with the associated indexes at which it is found in that block. This can lead to a redundancy of some hits in the results. The parser allows to join this redundant motifs together under one hit while ordering the results. The results can be ordered: 
 
@@ -187,7 +187,7 @@ The parser allows also to generate an output where the retrieved best alignment 
 
 ## **To wig (to_wig.py)**
 
-Together with NeSSie it is also provided a python script that can be used to better visualize the raw output obtained for the analyses of the sequence entropy and complexity. The script allows to generate from the output a WIG format file that can be visualized using a genome browser.
+Together with NeSSie, a python script is also provided that can be used to better visualize the raw output obtained for the analyses of the sequence entropy and complexity. The script allows to generate from the output a WIG format file that can be visualized using a genome browser.
 
 `to_wig.py -i path/input/file -o path/output/file`
 
@@ -196,7 +196,7 @@ Together with NeSSie it is also provided a python script that can be used to bet
 
 ## **De novo search for motifs with *mirror* or *palindromic* symmetry**
 
-The program allows to perform a *de novo* search for motifs with a *mirror* or *palindromic* symmetry in a DNA sequence. Both *perfect* and *degenerated* motifs can be detected since the program is flexible enough to allow for the presence of mismatches and gaps that impair the symmetry. The search is exhaustive and all the motifs corresponding to the defined parameters are reported. 
+The program allows to perform a *de novo* search for motifs with a *mirror* or *palindromic* symmetry in a DNA sequence. Both *perfect* and *degenerate* motifs can be detected since the program is flexible enough to allow for the presence of mismatches and gaps that impair the symmetry. The search is exhaustive and all the motifs corresponding to the defined parameters are reported. 
 
 This is a basic command line that allows to detect all the perfect *mirror* (**-M**) or *palindromic* (**-P**) motifs of length *n* in the sequence. The input must be a file in *fasta* or *multi-fasta* format. *n* is a positive integer.<br/>
 `nessie -I path/input/file -O path/output/file {-P | -M} -k n`
@@ -221,7 +221,7 @@ To limit the search to a sub-string of the sequence it is possible to use **-b**
 
 ## **De novo search for motifs with *DNA-triplex* forming potential**
 
-The program allows to perform a *de novo* search for motifs with the potential to form *DNA-triplexes* in a DNA sequence. *DNA-triplexes* can form from homopurine motifs characterised by a *mirror* symmetry. Both *perfect* and *degenerated* motifs can be detected since the program is flexible enough to allow for the presence of mismatches and gaps that impair the symmetry as well as mixed purine-pyrimidine motifs. The search is exhaustive and all the motifs corresponding to the defined parameters are reported. 
+The program allows to perform a *de novo* search for motifs with the potential to form *DNA-triplexes* in a DNA sequence. *DNA-triplexes* can form from homopurine motifs characterised by a *mirror* symmetry. Both *perfect* and *degenerate* motifs can be detected since the program is flexible enough to allow for the presence of mismatches and gaps that impair the symmetry as well as mixed purine-pyrimidine motifs. The search is exhaustive and all the motifs corresponding to the defined parameters are reported. 
 
 This is a basic command line that allows to detect all the perfect potential *DNA-triplex* forming motifs (**-T**) of length *n* in the sequence. The input must be a file in *fasta* or *multi-fasta* format. *n* is a positive integer.<br/>
 `nessie -I path/input/file -O path/output/file -T -k n`

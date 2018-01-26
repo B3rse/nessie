@@ -59,7 +59,7 @@ void print_h(ostream &pout = std::cout){
 	pout << "  -E/--entropy:  Shannon entropy calculation" << std::endl;
 	pout << "  -L/--linguistic:  linguistic complexity calculation" << std::endl;
 	pout << "  -T/--triplex:  search for possible triplex forming sequences" << std::endl;
-	pout << "  -G/--quadruplex:  search for possible G4-DNA forming sequences" << std::endl;
+//	pout << "  -G/--quadruplex:  search for possible G4-DNA forming sequences" << std::endl;
 	pout << "  -A/--allkmer:  search for all kmers in the sequence" << std::endl;
 
 	pout << std::endl;

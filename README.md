@@ -31,6 +31,11 @@ A make file is available in the NeSSie folder to easily compile the program. To 
 This will generate the binary file nessie inside the folder.
 
 
+## **Using the library**
+
+To bundle the library into your code simply 
+`#include "Nessie.h"`
+
 ## **Quick guide**
 
 This is a quick reference guide, to see more details on specific analyses check the relative sections. 

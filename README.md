@@ -184,7 +184,6 @@ The parser allows also to generate an output where the retrieved best alignments
 
 ***note**: when generating the GFF, a color code is assigned to motifs based on their score. From lower to higher scores the colors are red, yellow, blue, green in the order*.
 
-
 `NessieOutParser.py -i path/input/file -o path/output/file [-c] [-a] [-g] [-s]`
 
 ***note**: Python 2.7 is required*.
@@ -195,6 +194,15 @@ The parser allows also to generate an output where the retrieved best alignments
 Together with NeSSie, a python script is also provided that can be used to better visualize the raw output obtained for the analyses of the sequence entropy and complexity. The script allows to generate from the output a WIG format file that can be visualized using a genome browser.
 
 `to_wig.py -i path/input/file -o path/output/file`
+
+***note**: Python 2.7 is required*.
+
+
+## **To tab formatted file (to_tabformat.py)**
+
+Together with NeSSie, a python script is also provided that can be used to organize the raw output obtained for the search of *mirror*, *palindromic* and *DNA-triplex* forming motifs in a tab formatted file. The results can be ordered by indexes (default), by score (**-s**) or by counts (**-c**).
+
+`to_tabformat.py -i path/input/file -o path/output/file [-c] [-s]` 
 
 ***note**: Python 2.7 is required*.
 

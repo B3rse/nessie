@@ -23,7 +23,7 @@ A make file is available in the NeSSie folder to easily compile the program. To 
 - Download the repository<br/>
 
 - Unpack the repository and position inside the folder<br/>
-`tar -xvzf path/to/packed/folder && cd path/to/unpacked/folder`
+`unzip path/to/packed/folder` and `cd path/to/unpacked/folder`
 
 - Compile the program<br/>
 `make`   

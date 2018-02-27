@@ -104,7 +104,7 @@ def routine_print_tab(key, value, of, strand, seq_type, counts_only, indexes_onl
 	elif seq_type == 1:
 		of.write('p\t{0}\t'.format(strand))
 	else:
-		of.write('t\{0}\t'.format(strand))
+		of.write('t\t{0}\t'.format(strand))
 	#end if
 	of.write('{0}\t{1}'.format(value['seq_len'], value['score']))
 	if not indexes_only:

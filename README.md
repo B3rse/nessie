@@ -15,6 +15,8 @@ The tool currently offers the following types of analyses:
 
 Michele Berselli, <berselli.michele@gmail.com>
 
+**Publication:** Michele Berselli, Enrico Lavezzo, Stefano Toppo; NeSSie: a tool for the identification of approximate DNA sequence symmetries, Bioinformatics, bty142, https://doi.org/10.1093/bioinformatics/bty142
+
 
 ## **Install from source**
 

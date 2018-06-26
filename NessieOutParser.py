@@ -283,7 +283,7 @@ def routine_print_gff(dict_to_print, of, counts_only, indexes_only, show_align, 
 		of.write('{0}\tNeSSie\t{1}\t{2}\t{3}\t{4}\t{5}\t.\tID={6};color=#{7};score={8}\n'.format(
 																			seq_ID, 
 																			tipo,
-																			idx,
+																			idx + 1,
 																			idx + dict_to_print[key]['seq_len'],
 																			score,
 																			strand,

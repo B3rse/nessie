@@ -275,7 +275,7 @@ def routine_print_gff(dict_to_print, of, counts_only, indexes_only, show_align, 
 	#end for
 
 	# Color scale
-	color_dict = {0: 'FF0000', 1: 'FF0000', 2: 'FFEE50', 3: '0080FF', 4: '00FF80', 5: '00FF80', 6: '00FF80'}
+	color_dict = {0: 'FF0000', 1: 'FF0000', 2: 'FFEE50', 3: '0080FF', 4: '00FF80', 5: '00FF80', 6: '00FF80', 7: '00FF80'}
 	incr = max_len / 5
 
 	for (idx, key) in sorted(dict_idxs_key.iteritems()):
